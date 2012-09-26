@@ -21,7 +21,7 @@ typedef enum
 } departments;
 
 @property int departmentUnit;
-@property NSString *marketShare;
-@property int estimatedFutureGrowth;
+@property int userRating;
+@property int adoptionRate;
 
 @end
