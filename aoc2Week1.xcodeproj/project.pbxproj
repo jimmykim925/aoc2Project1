@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9709C9451612B6C200934763 /* companyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9709C9441612B6C200934763 /* companyFactory.m */; };
+		9709C9491612B6F100934763 /* baseCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = 9709C9481612B6F100934763 /* baseCompany.m */; };
+		9709C94C1612B72700934763 /* appleCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = 9709C94B1612B72700934763 /* appleCompany.m */; };
+		9709C94F1612B74800934763 /* googleCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = 9709C94E1612B74800934763 /* googleCompany.m */; };
+		9709C9521612B76E00934763 /* yelpCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = 9709C9511612B76E00934763 /* yelpCompany.m */; };
 		97D46A6E16112DD400310D4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D46A6D16112DD400310D4C /* UIKit.framework */; };
 		97D46A7016112DD400310D4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D46A6F16112DD400310D4C /* Foundation.framework */; };
 		97D46A7216112DD400310D4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D46A7116112DD400310D4C /* CoreGraphics.framework */; };
@@ -22,6 +27,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9709C9431612B6C200934763 /* companyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyFactory.h; sourceTree = "<group>"; };
+		9709C9441612B6C200934763 /* companyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = companyFactory.m; sourceTree = "<group>"; };
+		9709C9471612B6F100934763 /* baseCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseCompany.h; sourceTree = "<group>"; };
+		9709C9481612B6F100934763 /* baseCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseCompany.m; sourceTree = "<group>"; };
+		9709C94A1612B72700934763 /* appleCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appleCompany.h; sourceTree = "<group>"; };
+		9709C94B1612B72700934763 /* appleCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = appleCompany.m; sourceTree = "<group>"; };
+		9709C94D1612B74800934763 /* googleCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = googleCompany.h; sourceTree = "<group>"; };
+		9709C94E1612B74800934763 /* googleCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = googleCompany.m; sourceTree = "<group>"; };
+		9709C9501612B76E00934763 /* yelpCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yelpCompany.h; sourceTree = "<group>"; };
+		9709C9511612B76E00934763 /* yelpCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yelpCompany.m; sourceTree = "<group>"; };
 		97D46A6916112DD400310D4C /* aoc2Week1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aoc2Week1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D46A6D16112DD400310D4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		97D46A6F16112DD400310D4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +107,16 @@
 				97D46A8816112DD400310D4C /* ViewController_iPhone.xib */,
 				97D46A8B16112DD400310D4C /* ViewController_iPad.xib */,
 				97D46A7416112DD400310D4C /* Supporting Files */,
+				9709C9431612B6C200934763 /* companyFactory.h */,
+				9709C9441612B6C200934763 /* companyFactory.m */,
+				9709C9471612B6F100934763 /* baseCompany.h */,
+				9709C9481612B6F100934763 /* baseCompany.m */,
+				9709C94A1612B72700934763 /* appleCompany.h */,
+				9709C94B1612B72700934763 /* appleCompany.m */,
+				9709C94D1612B74800934763 /* googleCompany.h */,
+				9709C94E1612B74800934763 /* googleCompany.m */,
+				9709C9501612B76E00934763 /* yelpCompany.h */,
+				9709C9511612B76E00934763 /* yelpCompany.m */,
 			);
 			path = aoc2Week1;
 			sourceTree = "<group>";
@@ -180,6 +205,11 @@
 				97D46A7A16112DD400310D4C /* main.m in Sources */,
 				97D46A7E16112DD400310D4C /* AppDelegate.m in Sources */,
 				97D46A8716112DD400310D4C /* ViewController.m in Sources */,
+				9709C9451612B6C200934763 /* companyFactory.m in Sources */,
+				9709C9491612B6F100934763 /* baseCompany.m in Sources */,
+				9709C94C1612B72700934763 /* appleCompany.m in Sources */,
+				9709C94F1612B74800934763 /* googleCompany.m in Sources */,
+				9709C9521612B76E00934763 /* yelpCompany.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +335,7 @@
 				97D46A9216112DD400310D4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
