@@ -11,7 +11,8 @@
 @interface appleCompany : baseCompany
 
 // Data members
-@property int iphone;
-@property int pricePerPhone;
+@property int iphoneSalesCurrentYear;
+@property int iphoneSalesLastYear;
+
 
 @end

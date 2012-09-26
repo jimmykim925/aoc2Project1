@@ -10,4 +10,8 @@
 
 @interface yelpCompany : baseCompany
 
+// Data members
+@property int totalUsers;
+@property int newUserRate;
+
 @end

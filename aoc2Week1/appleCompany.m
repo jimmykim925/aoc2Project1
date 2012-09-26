@@ -10,7 +10,7 @@
 
 @implementation appleCompany
 
-@synthesize iphone, pricePerPhone;
+@synthesize iphoneSalesCurrentYear, iphoneSalesLastYear;
 
 // Customize init to set unique data members
 -(id)init
@@ -18,7 +18,7 @@
   self = [super init];
   if (self != nil)
   {
-    [self setGrowthRate:10];
+    [self setGrowthRate:50];
     [self setRevenues:0];
     [self setExpenses:0];
   }
@@ -28,7 +28,7 @@
 // Override baseCompany growth rate to factor in unique data member
 -(void)calculateFinancialRatio
 {
-  [self setGrowthRate:(iphone * pricePerPhone)];
+  [self setGrowthRate:((iphoneSalesCurrentYear-iphoneSalesLastYear)/iphoneSalesLastYear)];
   NSLog(@"New apple growth rate = %d", [self growthRate]);
 }
 
