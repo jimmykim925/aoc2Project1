@@ -18,9 +18,9 @@
   UILabel *googleBusinessUnit;
   UILabel *googleAdoptionRate;
   UILabel *googleGrowth;
-//  UILabel *yelp;
-//  UILabel *yelp;
-//  UILabel *yelp;
+  UILabel *yelpUserLabel;
+  UILabel *yelpNewUserLabel;
+  UILabel *yelpGrowthLabel;
 
 }
 

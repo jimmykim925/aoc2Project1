@@ -128,18 +128,47 @@
   
   if (yelpUserStatus != nil){
     NSString *yelpFinancialCondition = @"Yelp is in decent condition";
-    [yelpUserStatus setTotalUsers:100];
-    [yelpUserStatus setNewUserRate:25];
+    [yelpUserStatus setTotalUsers:30];
+    [yelpUserStatus setNewUserRate:10];
     [yelpUserStatus setFinancialCondition:yelpFinancialCondition];
     
-    NSLog(@"%@", [yelpUserStatus financialCondition]);
+    NSString *yelpReviews = [[NSString alloc] init];
+    yelpReviews = @"New Yelp app: new maps, reservations";
+    [newIphone setProductFeatures:yelpReviews];
     
     // Calculate and show growth rate
     [yelpUserStatus calculateFinancialRatio];
     int newYelpGrowthRate = [yelpUserStatus growthRate];
+    NSString *yelpGrowthRateLabel = [[NSString alloc] initWithFormat:@"Yelp's grew by %d new Yelpers", newYelpGrowthRate];
     NSLog(@"Yelp's new growth rate is %d percent", newYelpGrowthRate);
-  }
   
+    yelpUserLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 270.0f, 320.0f, 40.0f)];
+      if (yelpUserLabel != nil) {
+        yelpUserLabel.text = yelpFinancialCondition;
+        yelpUserLabel.backgroundColor = [UIColor whiteColor];
+        yelpUserLabel.textAlignment = kCTLeftTextAlignment;
+        yelpUserLabel.textColor = [UIColor blackColor];
+      }
+      [self.view addSubview:yelpUserLabel];
+    
+    yelpNewUserLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 315.0f, 320.0f, 40.0f)];
+      if (yelpNewUserLabel != nil) {
+        yelpNewUserLabel.text = yelpReviews;
+        yelpNewUserLabel.backgroundColor = [UIColor whiteColor];
+        yelpNewUserLabel.textAlignment = kCTLeftTextAlignment;
+        yelpNewUserLabel.textColor = [UIColor blackColor];
+      }
+      [self.view addSubview:yelpNewUserLabel];
+    
+    yelpGrowthLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 360.0f, 320.0f, 40.0f)];
+      if (yelpGrowthLabel != nil) {
+        yelpGrowthLabel.text = yelpGrowthRateLabel;
+        yelpGrowthLabel.backgroundColor = [UIColor whiteColor];
+        yelpGrowthLabel.textAlignment = kCTLeftTextAlignment;
+        yelpGrowthLabel.textColor = [UIColor blackColor];
+      }
+      [self.view addSubview:yelpGrowthLabel];
+  }
   
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.

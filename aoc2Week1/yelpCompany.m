@@ -18,10 +18,9 @@
   self = [super init];
   if (self != nil)
   {
-    [self setGrowthRate:20];
+    [self setGrowthRate:0];
     [self setTotalUsers:0];
     [self setNewUserRate:0];
-    NSLog(@"You created a company, Yelp, growth rate of %d, total users %d, new user rate %d", [self growthRate], [self totalUsers], [self newUserRate]);
   }
   return self;
 };
