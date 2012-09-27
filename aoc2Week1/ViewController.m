@@ -16,8 +16,66 @@
 
 - (void)viewDidLoad
 {
+  // Create a company called Apple and set its current year sales
+  appleCompany *newIphone = (appleCompany*)[companyFactory createNewCompany:APPLE];
+  [newIphone setIphoneSalesCurrentYear:30];
+  
+  if (newIphone !=nil){
+    
+    NSArray *appleReviews = [[NSArray alloc] initWithObjects:@"camera", @"screen", @"speed", @"apps", nil];
+    [newIphone setAnnualReviews:appleReviews];
+    
+    NSString *appleFinancialCondition = @"Apple seems to be financially healthy";
+    [newIphone setFinancialCondition:appleFinancialCondition];
+    
+    NSLog(@"You created a company, Apple, with reviews on it's %@", [newIphone annualReviews]);
+    NSLog(@"%@", [newIphone financialCondition]);
+  
+    // Calculate and show the growth rate
+    [newIphone calculateFinancialRatio];
+    
+  }
+  
+  // Create a Google company and set user rating etc.
+  googleCompany *googleDepartment = (googleCompany*)[companyFactory createNewCompany:GOOGLE];
+  
+  if (googleDepartment != nil){
+  
+    NSString *googleFinancialCondition = @"Google is in excellent condition";
+    
+    [googleDepartment setDepartmentUnit:ANDROID];
+    [googleDepartment setUserRating:25];
+    [googleDepartment setFinancialCondition:googleFinancialCondition];
+    
+    NSLog(@"%@", [googleDepartment financialCondition]);
+  
+    // Calculate and show growth rate
+    [googleDepartment calculateFinancialRatio];
+    int newGoogleGrowthRate = [googleDepartment growthRate];
+    NSLog(@"Google's new growth rate is %d percent", newGoogleGrowthRate);
+  }
+  
+  // Create a Yelp company and set
+  yelpCompany *yelpUserStatus = (yelpCompany*)[companyFactory createNewCompany:YELP];
+  
+  if (yelpUserStatus != nil){
+    NSString *yelpFinancialCondition = @"Yelp is in decent condition";
+    [yelpUserStatus setTotalUsers:100];
+    [yelpUserStatus setNewUserRate:25];
+    [yelpUserStatus setFinancialCondition:yelpFinancialCondition];
+    
+    NSLog(@"%@", [yelpUserStatus financialCondition]);
+    
+    // Calculate and show growth rate
+    [yelpUserStatus calculateFinancialRatio];
+    int newYelpGrowthRate = [yelpUserStatus growthRate];
+    NSLog(@"Yelp's new growth rate is %d percent", newYelpGrowthRate);
+  }
+  
+  
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+  
 }
 
 - (void)didReceiveMemoryWarning

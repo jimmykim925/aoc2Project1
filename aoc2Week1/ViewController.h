@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "companyFactory.h"
 
 @interface ViewController : UIViewController
 

@@ -18,9 +18,11 @@
   self = [super init];
   if (self != nil)
   {
-    [self setGrowthRate:50];
-    [self setRevenues:0];
-    [self setExpenses:0];
+    [self setGrowthRate:0];
+    [self setIphoneSalesCurrentYear:0];
+    [self setIphoneSalesLastYear:10];
+    
+     NSLog(@"You generated a Company");
   }
   return self;
 };

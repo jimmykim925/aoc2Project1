@@ -16,13 +16,13 @@
 typedef enum
 {
   APPLE,
-  GOOOGLE,
+  GOOGLE,
   YELP
 } companyEnum;
 
 // Data members
-@property NSArray *revenues;
-@property NSString *expenses;
+@property NSArray *annualReviews;
+@property NSString *financialCondition;
 @property int growthRate;
 
 // Initialize

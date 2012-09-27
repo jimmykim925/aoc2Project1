@@ -11,7 +11,7 @@
 @implementation baseCompany
 
 // Create get and set methods for properties
-@synthesize revenues, expenses, growthRate;
+@synthesize annualReviews, financialCondition, growthRate;
 
 // Initialize the base company, create the instance, set the growth rate to 0
 -(id)init
@@ -19,8 +19,8 @@
   self = [super init];
   if (self != nil)
   {
-    [self setRevenues:nil];
-    [self setExpenses:nil];
+    [self setAnnualReviews:nil];
+    [self setFinancialCondition:@""];
     [self setGrowthRate:0];
   }
   return self;
