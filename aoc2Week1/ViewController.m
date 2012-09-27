@@ -21,6 +21,7 @@
   [newIphone setIphoneSalesCurrentYear:30];
   
   if (newIphone !=nil){
+    // Create data members for Apple Company
     NSString *appleReviews = [[NSString alloc] init];
     appleReviews = @"New iPhone features: Camera, Siri";
     [newIphone setProductFeatures:appleReviews];
@@ -62,27 +63,64 @@
     }
     [self.view addSubview:appleGrowth];
     
-  
-  
   }
   
   // Create a Google company and set user rating etc.
   googleCompany *googleDepartment = (googleCompany*)[companyFactory createNewCompany:GOOGLE];
   
   if (googleDepartment != nil){
-  
-    NSString *googleFinancialCondition = @"Google is in excellent condition";
-    
+    // Set data members for Google Company
+    NSString *googleFinancialCondition = [[NSString alloc] init];
     [googleDepartment setDepartmentUnit:ANDROID];
-    [googleDepartment setUserRating:25];
+    [googleDepartment setUserRating:70];
     [googleDepartment setFinancialCondition:googleFinancialCondition];
     
-    NSLog(@"%@", [googleDepartment financialCondition]);
+    // Conditional for NSString for departments
+    NSString *departmentName = [[NSString alloc] init];
+    if ([googleDepartment departmentUnit] == 0){
+      departmentName = @"Search";
+    } else if ([googleDepartment departmentUnit] == 1){
+      departmentName = @"Android";
+    } else if ([googleDepartment departmentUnit] == 2){
+      departmentName = @"Self Driving Car";
+    }
+    
+    // Set financial condition and ratings using string w/ concatenation
+    googleFinancialCondition = [departmentName stringByAppendingString:@" is financially healthy"];
+    NSString *googleRating = [[NSString alloc] initWithFormat:[departmentName stringByAppendingString:@"'s current rating is %d out of 100"], [googleDepartment userRating]];
   
-    // Calculate and show growth rate
+    // Calculate and show adoption rate
     [googleDepartment calculateFinancialRatio];
-    int newGoogleGrowthRate = [googleDepartment growthRate];
-    NSLog(@"Google's new growth rate is %d percent", newGoogleGrowthRate);
+    int newGoogleAdoptionRate = [googleDepartment adoptionRate];
+    NSString *newGoogleAdoptionRateLabel = [[NSString alloc] initWithFormat:[departmentName stringByAppendingString:@"'s adoption rate is %d percent"], newGoogleAdoptionRate];
+    
+    // Allocate UILabels
+    googleBusinessUnit = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 135.0f, 320.0f, 40.0f)];
+    if (googleBusinessUnit != nil) {
+      googleBusinessUnit.text = googleFinancialCondition;
+      googleBusinessUnit.backgroundColor = [UIColor whiteColor];
+      googleBusinessUnit.textAlignment = kCTLeftTextAlignment;
+      googleBusinessUnit.textColor = [UIColor blackColor];
+    }
+    [self.view addSubview:googleBusinessUnit];
+    
+    googleAdoptionRate = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 180.0f, 320.0f, 40.0f)];
+    if (googleAdoptionRate != nil) {
+      googleAdoptionRate.text = googleRating;
+      googleAdoptionRate.backgroundColor = [UIColor whiteColor];
+      googleAdoptionRate.textAlignment = kCTLeftTextAlignment;
+      googleAdoptionRate.textColor = [UIColor blackColor];
+    }
+    [self.view addSubview:googleAdoptionRate];
+    
+    googleGrowth = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 225.0f, 320.0f, 40.0f)];
+    if (googleGrowth != nil) {
+      googleGrowth.text = newGoogleAdoptionRateLabel;
+      googleGrowth.backgroundColor = [UIColor whiteColor];
+      googleGrowth.textAlignment = kCTLeftTextAlignment;
+      googleGrowth.textColor = [UIColor blackColor];
+    }
+    [self.view addSubview:googleGrowth];
   }
   
   // Create a Yelp company and set

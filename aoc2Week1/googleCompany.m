@@ -18,11 +18,9 @@
   self = [super init];
   if (self != nil)
   {
-    [self setGrowthRate:50];
+    [self setGrowthRate:0];
     [self setDepartmentUnit:ANDROID];
     [self setUserRating:100];
-    
-    NSLog(@"You generated a Company %d %d %d", [self growthRate], [self departmentUnit], [self userRating]);
   }
   return self;
 };
@@ -31,7 +29,7 @@
 -(void)calculateFinancialRatio
 {
   // Get user rating value
-  NSLog(@"Default User rating = %d", userRating);
+  //NSLog(@"Default User rating = %d", userRating);
   
   // Set the growth based on the user rating and adoption rate
   if (departmentUnit == SEARCH){
@@ -43,7 +41,6 @@
   } else if (departmentUnit == SELFDRIVINGCAR){
     [self setGrowthRate:20];
     [self setAdoptionRate:([self growthRate] + (userRating*.9) )];
-    NSLog(@"I really want a self driving car");
   } else {
     NSLog(@"Specify a valid department");
   }

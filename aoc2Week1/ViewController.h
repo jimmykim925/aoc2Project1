@@ -15,6 +15,12 @@
   UILabel *appleFeatures;
   UILabel *appleFinance;
   UILabel *appleGrowth;
+  UILabel *googleBusinessUnit;
+  UILabel *googleAdoptionRate;
+  UILabel *googleGrowth;
+//  UILabel *yelp;
+//  UILabel *yelp;
+//  UILabel *yelp;
 
 }
 
