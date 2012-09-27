@@ -21,7 +21,7 @@ typedef enum
 } companyEnum;
 
 // Data members
-@property NSArray *productFeatures;
+@property NSString *productFeatures;
 @property NSString *financialCondition;
 @property int growthRate;
 

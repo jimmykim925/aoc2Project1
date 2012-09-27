@@ -21,21 +21,49 @@
   [newIphone setIphoneSalesCurrentYear:30];
   
   if (newIphone !=nil){
-    
-    NSArray *appleReviews = [[NSArray alloc] initWithObjects:@"camera", @"screen", @"speed", nil];
+    NSString *appleReviews = [[NSString alloc] init];
+    appleReviews = @"New iPhone features: Camera, Siri";
     [newIphone setProductFeatures:appleReviews];
     
-    NSString *appleFinancialCondition = @"Apple seems to be financially healthy";
+    NSString *appleFinancialCondition = @"Apple is financially healthy";
     [newIphone setFinancialCondition:appleFinancialCondition];
-    NSLog(@"%@", [newIphone financialCondition]);
-    
-    NSLog(@"New iPhone features will include: %@, %@, %@", appleReviews[0], appleReviews[1], appleReviews[2]);
+    //NSLog(@"%@", [newIphone financialCondition]);
     
     // Calculate and show the growth rate
     [newIphone calculateFinancialRatio];
     int newAppleGrowthRate = [newIphone growthRate];
-    NSLog(@"Apple's new growth rate is %d percent", newAppleGrowthRate);
+    NSString *appleGrowthLabel = [[NSString alloc] initWithFormat:@"Apple's new growth rate is %d percent", newAppleGrowthRate];
     
+    // Create UILabels for Apple
+    appleFeatures = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 40.0f)];
+    if (appleFeatures != nil) {
+      appleFeatures.text = appleReviews;
+      appleFeatures.backgroundColor = [UIColor whiteColor];
+      appleFeatures.textAlignment = kCTLeftTextAlignment;
+      appleFeatures.textColor = [UIColor blackColor];
+    }
+    [self.view addSubview:appleFeatures];
+  
+    appleFinance = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 45.0f, 320.0f, 40.0f)];
+    if (appleFinance != nil) {
+      appleFinance.text = appleFinancialCondition;
+      appleFinance.backgroundColor = [UIColor whiteColor];
+      appleFinance.textAlignment = kCTLeftTextAlignment;
+      appleFinance.textColor = [UIColor blackColor];
+    }
+    [self.view addSubview:appleFinance];
+    
+    appleGrowth = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 90.0f, 320.0f, 40.0f)];
+    if (appleGrowth != nil) {
+      appleGrowth.text = appleGrowthLabel;
+      appleGrowth.backgroundColor = [UIColor whiteColor];
+      appleGrowth.textAlignment = kCTLeftTextAlignment;
+      appleGrowth.textColor = [UIColor blackColor];
+    }
+    [self.view addSubview:appleGrowth];
+    
+  
+  
   }
   
   // Create a Google company and set user rating etc.

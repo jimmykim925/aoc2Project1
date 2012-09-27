@@ -13,6 +13,8 @@
 {
   // Set UILabel
   UILabel *appleFeatures;
+  UILabel *appleFinance;
+  UILabel *appleGrowth;
 
 }
 
