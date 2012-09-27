@@ -10,5 +10,10 @@
 #import "companyFactory.h"
 
 @interface ViewController : UIViewController
+{
+  // Set UILabel
+  UILabel *appleFeatures;
+
+}
 
 @end

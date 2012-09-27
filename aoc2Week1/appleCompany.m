@@ -22,7 +22,6 @@
     [self setIphoneSalesCurrentYear:0];
     [self setIphoneSalesLastYear:10];
     
-     NSLog(@"You generated a Company");
   }
   return self;
 };
@@ -31,7 +30,7 @@
 -(void)calculateFinancialRatio
 {
   [self setGrowthRate:((iphoneSalesCurrentYear-iphoneSalesLastYear)/iphoneSalesLastYear)];
-  NSLog(@"New apple growth rate = %d", [self growthRate]);
+  //NSLog(@"New apple growth rate is %d percent", [self growthRate]);
 }
 
 @end

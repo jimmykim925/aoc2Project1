@@ -22,17 +22,19 @@
   
   if (newIphone !=nil){
     
-    NSArray *appleReviews = [[NSArray alloc] initWithObjects:@"camera", @"screen", @"speed", @"apps", nil];
-    [newIphone setAnnualReviews:appleReviews];
+    NSArray *appleReviews = [[NSArray alloc] initWithObjects:@"camera", @"screen", @"speed", nil];
+    [newIphone setProductFeatures:appleReviews];
     
     NSString *appleFinancialCondition = @"Apple seems to be financially healthy";
     [newIphone setFinancialCondition:appleFinancialCondition];
-    
-    NSLog(@"You created a company, Apple, with reviews on it's %@", [newIphone annualReviews]);
     NSLog(@"%@", [newIphone financialCondition]);
-  
+    
+    NSLog(@"New iPhone features will include: %@, %@, %@", appleReviews[0], appleReviews[1], appleReviews[2]);
+    
     // Calculate and show the growth rate
     [newIphone calculateFinancialRatio];
+    int newAppleGrowthRate = [newIphone growthRate];
+    NSLog(@"Apple's new growth rate is %d percent", newAppleGrowthRate);
     
   }
   

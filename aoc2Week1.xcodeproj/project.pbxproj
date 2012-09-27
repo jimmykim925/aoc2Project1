@@ -105,8 +105,6 @@
 				97D46A8516112DD400310D4C /* ViewController.h */,
 				97D46A8616112DD400310D4C /* ViewController.m */,
 				97D46A8816112DD400310D4C /* ViewController_iPhone.xib */,
-				97D46A8B16112DD400310D4C /* ViewController_iPad.xib */,
-				97D46A7416112DD400310D4C /* Supporting Files */,
 				9709C9431612B6C200934763 /* companyFactory.h */,
 				9709C9441612B6C200934763 /* companyFactory.m */,
 				9709C9471612B6F100934763 /* baseCompany.h */,
@@ -117,6 +115,7 @@
 				9709C94E1612B74800934763 /* googleCompany.m */,
 				9709C9501612B76E00934763 /* yelpCompany.h */,
 				9709C9511612B76E00934763 /* yelpCompany.m */,
+				97D46A7416112DD400310D4C /* Supporting Files */,
 			);
 			path = aoc2Week1;
 			sourceTree = "<group>";
@@ -124,6 +123,7 @@
 		97D46A7416112DD400310D4C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				97D46A8B16112DD400310D4C /* ViewController_iPad.xib */,
 				97D46A7516112DD400310D4C /* aoc2Week1-Info.plist */,
 				97D46A7616112DD400310D4C /* InfoPlist.strings */,
 				97D46A7916112DD400310D4C /* main.m */,
